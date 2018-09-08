@@ -1,12 +1,12 @@
 ## Inspiration
 
-It's September 8th 2017 and Hurricane Irma is twisting her way towards Florida. Like 95% of home-owning Floridians, you have a home insurance plan. But, like most others, you don't have full flood or natural disaster coverage. No traditional insurance company will take your business with Irma on the horizon. CNN is telling you it might be the most damaging storm of the century. You wonder how you protect you most valuable asset: your home. 
+It's September 8th 2017 and Hurricane Irma is twisting her way towards Florida. Like 95% of home-owning Floridians, you have a home insurance plan. But, like most others, you don't have full flood or natural disaster coverage. No traditional insurance company will take your business with Irma on the horizon. CNN is telling you it might be the most damaging storm of the century. You wonder how you protect your most valuable asset: your home. 
 
 With Insuricane, you can sign up for short-term home insurance using our webapp. Our servers immediately calculate the probability of damage to your home, our optimal hedging portfolio, and your initial payment.
 
 ## What it does
 
-The basic idea is that we can instantly hedge our risk by taking on a position in an inversely-correlated portfolio. For example, we might short sell local utility and real estate holdings, and go long on disaster suppliees like canned foods. For PennApps, we've focused on utilities, are there are several studies displaying a correlation following hurricanes. Here's the pipeline:
+The basic idea of Insuricane that we can instantly hedge our risk as an insurer by taking on a position in an inversely-correlated portfolio. For example, we might short sell local utility and real estate holdings, and go long on disaster suppliees like canned foods. For PennApps, we've focused on utilities, are there are several studies displaying a correlation following hurricanes. Here's the pipeline:
 
 1. The user inputs their address and reqested insurance coverage (in USD).
 2. We use NOAA hurricane data and our model to estimate the probability of the home being destroyed by the disaster. If it is too risky, we may chose not to offer the insurance product.
