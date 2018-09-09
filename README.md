@@ -47,6 +47,7 @@ We created a heuristics-based probabalistic model (lacking sufficiently detailed
 - Distances to various wind shields
 
 This model gives us probabilities (as estimates) of damage in the area. This is a proxy for the amount that needs to be insured:
+
 ![Miami](miamirisk.png "Miami") ![Orlando](disneyrisk.png "Orlando")
 
 
