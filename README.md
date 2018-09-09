@@ -18,7 +18,7 @@ For example, we might short sell local utility and real estate holdings, and go 
 5. We use EIA data on electrical plant construction costs to estimate the $ loss to the public company if the utility were to be destroyed, and sum over all their utilities (and subsidiaries) in the affected area. This is a function of the type of plant and the capacity (in megawatts). If the loss is immaterial to the company it will not effect their stock price, and thus cannot be used to hedge. In that case we throw the row out.
 6. We determine the joint probability (i.e. home destroyed and asset destroyed) by a simple heuristic: inverse squared distance to the house. 
 7. Companies that have made it to this step are valid members of our heding portfolio. We weight them according to their correlation with the house (5) and how material the damage would be to the company (damage divided by market cap).
-8. Having constructed a hedging portfolio and calculated the user's risk, we present the user with their premium. The premium is a lump-sum initial payment, equal to their requested insurance times the probability of impact. The user can choose to buy the insurance or reject.
+8. Having constructed a hedging portfolio and calculated the user's risk, we present the user with their premium. The premium is a lump-sum initial payment proporional to our estimation of our basis risk plus 5%. The user can choose to buy the insurance or reject.
 9. The user signs our agreement with DocuSign and receives a confirmation email. 
 10. Since this is a hackathon, the process stops here. If a real product, we'd automatically go short on our portfolio using a put spread in the options market (to hedge what is essentially binary payoff profile on our end).
 
