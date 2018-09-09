@@ -23,6 +23,8 @@ For example, we might short sell local utility and real estate holdings, and go 
 
 ## How we built it
 
+The front end is built using React with Leaflet and DocuSign's API. The backend is built using Python and related data science and GIS libraries. Our data on the precise location, power plant type, and owner was pieced together from [EIA](https://www.eia.gov/). Our focus on Hurricane Irma allowed us to trim our database to Florida, though the EIA datasets are national and could be used for any US state.
+
 ## Challenges we ran into
 
 ## Accomplishments that we're proud of
