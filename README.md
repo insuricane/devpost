@@ -8,7 +8,7 @@ With Insuricane, you can sign up for short-term home insurance using our webapp.
 
 The basic idea of Insuricane that we can instantly hedge our risk as an insurer by taking on a position in an inversely-correlated portfolio. Most impoortantly, we can hedge the millisecond an order comes in, reducing basis risk by crafting the best hedge based on your precise location.
 
-For example, we might short sell local utility and real estate holdings, and go long on disaster suppliees like canned foods. For PennApps, we've focused on utilities, are there are several studies displaying a correlation following hurricanes. Here's the pipeline:
+For example, we might short sell local utility and real estate holdings and go long on disaster suppliees like canned foods. For PennApps, we've focused on utilities because there are several studies displaying a correlation following hurricanes. Here's the pipeline:
 
 1. The user inputs their address and reqested insurance coverage (in USD).
 2. We use NOAA hurricane data and our model to estimate the probability of the home being destroyed by the disaster. If it is too risky, we may chose not to offer the insurance product.
