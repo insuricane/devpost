@@ -53,8 +53,6 @@ We created a heuristics-based probabalistic model (lacking sufficiently detailed
 - The predictions we have are on daily forecasts from NOAA, which means we would not be able to interpolate data effectively between two days. Although that location ideally should not be incredibly important (it is unlikely to assume that people would only wait until the last half-day possible to purchase insurance), it makes our application less responsive than ideal.
 - Moreover, we have downloaded data from a specific time frame (9/8/17, 8-9AM EST; 2 days prior to Floridan landfall of Irma). Having a way to stream in data as NOAA updates would be critical for usability of this product.
 
-## Accomplishments that we're proud of
-
-## What we learned
-
 ## What's next for Insuricane
+
+We believe Insuricane should be made into a real product for the benefit of Americans at risk of hurricanes. If we persue it, we believe the best course is to see investment from a well heeled insurance company that could bear the counterparty risk. They would be an eager strategic investor because (1) people tend to buy more insurance after disaster strikes and (2) the investment would serve as a hedge against their existing business.
