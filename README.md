@@ -27,6 +27,8 @@ For example, we might short sell local utility and real estate holdings, and go 
 
 ## How we built it
 
+![tech icons](tech.png)
+
 The front end is built using React with Leaflet and DocuSign's API. The backend is built using Python and related data science and GIS libraries. Our data on the precise location, power plant type, and owner was pieced together by several joins on [EIA](https://www.eia.gov/) datasets. Predicted hurricane wind speed, path data, and location are derived from two [NOAA](http://www.noaa.gov/) datasets.
 
 Specifically, our datasets are as follows from NOAA:
