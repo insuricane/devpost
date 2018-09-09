@@ -62,7 +62,7 @@ This model gives us probabilities (as estimates) of damage in the area. This is 
 - It is also not possible for us to perform emergency insurance functions that take into account the chance of the house itself suffering a deal of damage (i.e. does a house look like it may be slightly damaged or completely flattened).
 - Finally, we are generally underpredicting locations that are "farther along" the cone; namely; locations that are in the latter days of the cone and where the hurricane is estimated to turn towards. We can see this above in our Miami and Orlando graphs, and we can see below how, due to the days and uncertainty of storm movement, we see there is a greater error cone (the shaded blue below). This means we may actually underestimate the risk as it stands.
 
-![Kepler graph of Irma](keplermap.png "Irma's path")
+![Kepler graph of Irma](map.png)
 
 
 ## What's next for Insuricane
