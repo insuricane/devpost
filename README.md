@@ -46,7 +46,11 @@ We created a heuristics-based probabalistic model (lacking sufficiently detailed
 - Which wind shield (nearest, middle, farthest) if any the house is in. This is correlated with the distance to the eye but provides us a proxy for wind speeds. Being closer to the center from these first two factors leads to a greater probability of the house being hit.
 - Distances to various wind shields
 
-## Challenges we ran into
+This model gives us probabilities (as estimates) of damage in the area. This is a proxy for the amount that needs to be insured:
+![Miami](miamirisk.png "Miami") ![Orlando](orlandorisk.png "Orlando")
+
+
+## Challenges we ran into and future improvements
 - Our program takes in household location data and uses the storm tracking information to determine the likelihood of a house being hit by a storm. However, the sparsity of data we had made this challenging to do:
   - We did not have training or test data, which impeded us from using a trained regression model. Although there is data for general regions, our project focuses on specific properties and there is not data on a household level for destruction.
   - We also do not have wind speed or rainfall predictions at each level. 
@@ -54,7 +58,15 @@ We created a heuristics-based probabalistic model (lacking sufficiently detailed
     - Moreover, rainfall estimates typically only are released closer to landfall, but the goal of this program would be to give people a system to purchase insurance on in advance of the storm approaching.
 - The predictions we have are on daily forecasts from NOAA, which means we would not be able to interpolate data effectively between two days. Although that location ideally should not be incredibly important (it is unlikely to assume that people would only wait until the last half-day possible to purchase insurance), it makes our application less responsive than ideal.
 - Moreover, we have downloaded data from a specific time frame (9/8/17, 8-9AM EST; 2 days prior to Floridan landfall of Irma). Having a way to stream in data as NOAA updates would be critical for usability of this product.
+- It is also not possible for us to perform emergency insurance functions that take into account the chance of the house itself suffering a deal of damage (i.e. does a house look like it may be slightly damaged or completely flattened).
+- Finally, we are generally underpredicting locations that are "farther along" the cone; namely; locations that are in the latter days of the cone and where the hurricane is estimated to turn towards. We can see this above in our Miami and Orlando graphs, and we can see below how, due to the days and uncertainty of storm movement, we see there is a greater error cone (the shaded blue below). This means we may actually underestimate the risk as it stands.
+![Kepler graph of Irma](keplerman.png "Irma's path")
+
 
 ## What's next for Insuricane
 
-We believe Insuricane should be made into a real product for the benefit of Americans at risk of hurricanes. If we persue it, we believe the best course is to see investment from a well heeled insurance company that could bear the counterparty risk. They would be an eager strategic investor because (1) people tend to buy more insurance after disaster strikes and (2) the investment would serve as a hedge against their existing business.
+We believe Insuricane should be made into a real product for the benefit of Americans at risk of hurricanes. Further back-testing of our models would validate the viability of this derivatives/insurance strategy, as we scale it beyond just a hurricane-based system towards numerous types of natural disasters. Tornadoes are a quick example that come to mind (Earthquakes, by comparison, are much harder to forecast) and would serve a different consumer base (although we may need a new name...). Moreover, through additional development we could expand the types of products that Insuricane could take positions on in the derivatives markets, such as crude oil futures depending on the location of various rigs or refineries that may be damaged/shut down in the event of extreme weather.
+
+Developing the business further, as with any insurance/risk management product we need to create an efficient way to manage claims and payouts to help consumers. There is valid argument that providing a derivatives product that consumers could directly buy from us, rather than an insurance policy, would be easier to manage than insurance; counterarguments to that include that (1) consumers may not feel as comfortable with financial trading, (2) people may not have credentials, etc. set up for themselves, and (3) this is more of a "laissez-faire" approach in which we may not be acting in the best interests of the people we seek to help, despite making it easier to manage for them and ourselves on the claims/settlement side.
+
+From a venture perspective, if we are to pursue it, we believe the best course is to see investment from a well heeled insurance company that could bear the counterparty risk. They would be an eager strategic investor because (1) people tend to buy more insurance after disaster strikes and (2) the investment would serve as a hedge against their existing business. Financial services institutions such as commercial banks may also be interested, as a means of both (1) providing additional value to their customers (especially if they have housing loan options) in times of need, and (2) breaking into the insurance field as a new disruptive player.
