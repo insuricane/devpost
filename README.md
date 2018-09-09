@@ -1,6 +1,6 @@
 ## Inspiration
 
-![insuricane](ban.png)
+![insuricane](https://raw.githubusercontent.com/insuricane/devpost/master/ban.png)
 
 It's September 8th 2017 and Hurricane Irma is twisting her way towards Florida. Like 95% of home-owning Floridians, you have a home insurance plan. But, like most others, you don't have full flood or natural disaster coverage - in fact, 70% of you don't, and even of those that do usally aren't fully covered. With the storm approaching Category 4/5 speeds and almost certain landfall, no traditional insurance company will take your business (a surefire loss for them). CNN is telling you it might be the most damaging storm of the century. You can get out of the state, for sure, but still you wonder how you protect your most valuable asset: your home. 
 
@@ -11,7 +11,7 @@ With Insuricane, you can sign up for short-term home insurance using our webapp.
 
 The basic idea of Insuricane that we can instantly hedge our risk as an insurer by taking on a position in an inversely-correlated portfolio. Most impoortantly, we can hedge the millisecond an order comes in, reducing basis risk by crafting the best hedge based on your precise location.
 
-![hedge](hedge.png)
+![hedge](https://raw.githubusercontent.com/insuricane/devpost/master/hedge.png)
 
 For example, we might short sell local utility and real estate holdings, and go long on disaster suppliees like canned foods. For PennApps, we've focused on utilities, are there are several studies displaying a correlation following hurricanes. Here's the pipeline:
 
@@ -29,7 +29,7 @@ For example, we might short sell local utility and real estate holdings, and go 
 
 ## How we built it
 
-![tech icons](tech.png)
+![tech icons](https://raw.githubusercontent.com/insuricane/devpost/master/tech.png)
 
 The front end is built using React with Leaflet and DocuSign's API. The backend is built using Python and related data science and GIS libraries. Our data on the precise location, power plant type, and owner was pieced together by several joins on [EIA](https://www.eia.gov/) datasets. Predicted hurricane wind speed, path data, and location are derived from two [NOAA](http://www.noaa.gov/) datasets.
 
@@ -48,7 +48,7 @@ We created a heuristics-based probabalistic model (lacking sufficiently detailed
 
 This model gives us probabilities (as estimates) of damage in the area. This is a proxy for the amount that needs to be insured:
 
-![charts](charts.png)
+![charts](https://raw.githubusercontent.com/insuricane/devpost/master/charts.png)
 
 
 ## Challenges we ran into and future improvements
@@ -62,7 +62,7 @@ This model gives us probabilities (as estimates) of damage in the area. This is 
 - It is also not possible for us to perform emergency insurance functions that take into account the chance of the house itself suffering a deal of damage (i.e. does a house look like it may be slightly damaged or completely flattened).
 - Finally, we are generally underpredicting locations that are "farther along" the cone; namely; locations that are in the latter days of the cone and where the hurricane is estimated to turn towards. We can see this above in our Miami and Orlando graphs, and we can see below how, due to the days and uncertainty of storm movement, we see there is a greater error cone (the shaded blue below). This means we may actually underestimate the risk as it stands.
 
-![Kepler graph of Irma](map.png)
+![Kepler graph of Irma](https://raw.githubusercontent.com/insuricane/devpost/master/map.png)
 
 
 ## What's next for Insuricane
